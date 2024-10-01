@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Bell } from "lucide-react";
 import React from "react";
 import { Button } from "./ui/button";
 import { AlignLeft } from "lucide-react";
@@ -21,13 +21,13 @@ const NavBar = ({ collapsed, setCollapsed }: NavBarProps) => {
         />
         <h1 className="text-lg lg:text-2xl font-bold">Welcome Adams!</h1>
       </div>
-      <div className="flex items-center space-x-2">
-        <Button className="bg-indigo-600 hover:bg-indigo-700">
-          Launch Dapp
+      <div className="flex items-center">
+        <Button size="icon" variant="ghost">
+          <Bell className="h-6 w-6" />
         </Button>
-        <Button variant="outline" className="text-yellow-500 border-yellow-500">
-          <div className="w-5 h-5 bg-yellow-500 rounded-full mr-2"></div>
-          0x8c3b...Cof2
+        <Button className="ml-4 bg-indigo-600">Play PROP Game</Button>
+        <Button variant="outline" className="ml-4">
+          0x9c3b...Caf2
         </Button>
       </div>
     </header>

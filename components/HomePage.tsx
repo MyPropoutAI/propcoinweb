@@ -53,7 +53,7 @@ export default function HomePage() {
   const [cryptoPair, setCryptoPair] = useState("PROC/USD");
 
   return (
-    <div className="flex h-screen bg-black text-white">
+    <div className="flex bg-black text-white">
       {/* Main content */}
       <div className="flex-1 p-8 overflow-y-auto">
         <motion.div

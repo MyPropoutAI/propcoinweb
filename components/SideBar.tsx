@@ -31,9 +31,17 @@ const navItem = [
 const SideBar = () => {
   const pathname = usePathname();
   return (
-    <aside className="w-full lg:w-64 bg-[#111] p-4 lg:p-6 rounded-md">
+    <aside className="w-full lg:w-64 bg-[#111] p-4 lg:p-6 rounded-md flex flex-col">
       <div className="flex items-center mb-8">
-        <div className="w-10 h-10 bg-yellow-500 rounded-full mr-2"></div>
+        <div className="w-10 h-10 bg-yellow-500 rounded-full mr-2">
+          <Image
+            src="/images/logo.svg"
+            width={50}
+            height={50}
+            alt="logo"
+            className="w-10 h-10"
+          />
+        </div>
         <span className="text-xl font-bold">PROPCOIN</span>
       </div>
       <nav className="flex flex-col space-y-3">
@@ -61,7 +69,7 @@ const SideBar = () => {
           );
         })}
       </nav>
-      <div className="absolute bottom-4 left-4 flex space-x-4">
+      <div className=" flex mt-[10rem] justify-center items-center space-x-3">
         <Send className="w-6 h-6" />
         <Twitter className="w-6 h-6" />
         <MessageCircle className="w-6 h-6" />
