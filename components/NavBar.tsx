@@ -4,7 +4,12 @@ import React from "react";
 import { Button } from "./ui/button";
 import { AlignLeft } from "lucide-react";
 
-const NavBar = ({ collapsed, setCollapsed }) => {
+interface NavBarProps {
+  collapsed: boolean;
+  setCollapsed: (value: boolean) => void;
+}
+
+const NavBar = ({ collapsed, setCollapsed }: NavBarProps) => {
   return (
     <header className="flex justify-between items-center py-3 bg-black px-4">
       <div className="flex items-center">

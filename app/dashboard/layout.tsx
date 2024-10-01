@@ -10,7 +10,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState<boolean>(false);
   return (
     <div className="flex relative">
       <div className="hidden lg:flex lg:w-[20%] sticky top-0 left-0 p-3 bg-black">
