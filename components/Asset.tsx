@@ -2,18 +2,18 @@
 
 import { useState } from "react";
 import {
-  ArrowLeft,
+  // ArrowLeft,
   HelpCircle,
-  LayoutDashboard,
-  Wallet,
-  Send,
-  Gift,
+  // LayoutDashboard,
+  // Wallet,
+  //Send,
+  //Gift,
   Coins,
-  HelpCircle as Question,
-  ChevronDown,
+  //HelpCircle as Question,
+  //ChevronDown,
   ArrowUpRight,
   DollarSign,
-  ArrowUp,
+  //ArrowUp,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -32,7 +32,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import Link from "next/link";
+//import Link from "next/link";
 import {
   BarChart,
   Bar,
