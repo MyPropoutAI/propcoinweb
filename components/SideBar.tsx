@@ -7,15 +7,25 @@ import { usePathname } from "next/navigation";
 import { MessageCircle, Send, Twitter } from "lucide-react";
 
 const navItem = [
-  { title: "Overview", link: "/dashboard", icon: "/icons/overview.svg" },
-  { title: "My Assets", link: "/dashboard/asset", icon: "/icons/asset.svg" },
+  { title: "Dashboard", link: "/dashboard", icon: "/icons/dashboard.svg" },
+  { title: "Wallet", link: "/dashboard/wallet", icon: "/icons/wallet.svg" },
+  { title: "Fund", link: "/dashboard/fund", icon: "/icons/funds.svg" },
+  { title: "Stake", link: "/dashboard/stack", icon: "/icons/stake.svg" },
+  { title: "Swap", link: "/dashboard/swap", icon: "/icons/stake.svg" },
+  { title: "Lend", link: "/dashboard/lend", icon: "/icons/lend.svg" },
+  { title: "Mint SBT", link: "/dashboard/sbt", icon: "/icons/sbt.svg" },
+  {
+    title: "Withdraw",
+    link: "/dashboard/withdraw",
+    icon: "/icons/withdraw.svg",
+  },
+  { title: "Tokenize", link: "/dashboard/tokenize", icon: "/icons/stake.svg" },
   {
     title: "Airdrop Quest",
     link: "/dashboard/airdrop",
     icon: "/icons/airdrop.svg",
   },
-  { title: "Wallet", link: "/dashboard/wallet", icon: "/icons/wallet.svg" },
-  { title: "SBT", link: "/dashboard/sbt", icon: "/icons/sbt.svg" },
+
   { title: "Help & FAQ", link: "/dashboard/help", icon: "/icons/help.svg" },
 ];
 const SideBar = () => {
@@ -26,14 +36,14 @@ const SideBar = () => {
         <div className="w-10 h-10 bg-yellow-500 rounded-full mr-2"></div>
         <span className="text-xl font-bold">PROPCOIN</span>
       </div>
-      <nav className="flex flex-col space-y-6">
+      <nav className="flex flex-col space-y-3">
         {navItem.map((item, index) => {
           return (
             // Add this return statement
             <Link key={index} href={item.link}>
               <div
                 key={index}
-                className={`my-1 text-white font-normal w-[10rem] flex space-x-3 items-center rounded-md p-2 hover:bg-gray-200 hover:text-white text-md ${
+                className={` text-white font-normal w-[10rem] flex space-x-3 items-center rounded-md p-2 hover:bg-gray-200 hover:text-white text-md ${
                   pathname === item.link &&
                   "bg-indigo-600  shadow-sm text-white"
                 }`}
