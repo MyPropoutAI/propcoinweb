@@ -9,7 +9,7 @@ type LayoutProps = {
   children: ReactNode;
 };
 
-const layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const [collapsed, setCollapsed] = useState(false);
   return (
     <div className="flex relative">
@@ -37,4 +37,4 @@ const layout = ({ children }: LayoutProps) => {
   );
 };
 
-export default layout;
+export default Layout;
