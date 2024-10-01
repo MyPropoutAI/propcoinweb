@@ -53,7 +53,11 @@ export default function Signup() {
             </Link>
           </div>
           <div className="mt-4 flex items-center space-x-2">
-            <Checkbox id="terms" checked={agreed} onCheckedChange={setAgreed} />
+            <Checkbox
+              id="terms"
+              checked={agreed}
+              onCheckedChange={(checked) => setAgreed(checked === true)}
+            />
             <label htmlFor="terms" className="text-sm text-gray-400">
               By continuing, you agree to Propcoin wallets{" "}
               <a href="#" className="text-[#8B5CF6]">
