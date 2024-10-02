@@ -24,6 +24,20 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .glow_yellow {
+    @apply aspect-square opacity-40 absolute top-1/2 -translate-y-1/2;
+    box-shadow: 0px 0px 105px 20px #fbbe24, 0px 0px 105px 45px #fef08a;
+  }
+  .glow_blue {
+    @apply aspect-square opacity-40 absolute left-1/2  -translate-y-1/2  -translate-x-1/2;
+    box-shadow: 0px 0px 105px 75px #3b82f6, 0px 0px 105px 45px #60a5fa;
+  }
+
+  /* .glow::after {
+    content: "";
+    @apply shadow-2xl shadow-white;
+  } */
 }
 
 @layer base {

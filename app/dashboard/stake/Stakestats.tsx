@@ -22,8 +22,8 @@ const roboto = Roboto({
 
 const Stakestats = () => {
   return (
-    <div className="flex items-center gap-5 container ">
-      <Card className="bg-stake-cards border-none pl-2 pr-20 ">
+    <div className="flex items-center gap-3">
+      <Card className="bg-stake-cards border-none pl-2 pr-20 flex-1">
         <CardHeader>
           <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
             Total value locked
@@ -36,7 +36,7 @@ const Stakestats = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-stake-cards border-none pl-2 pr-20 ">
+      <Card className="bg-stake-cards border-none pl-2 pr-10 flex-1">
         <CardHeader>
           <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
             Points Generated
@@ -49,7 +49,7 @@ const Stakestats = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-stake-cards border-none pl-2 pr-20 ">
+      <Card className="bg-stake-cards border-none pl-2 pr-10 flex-1">
         <CardHeader>
           <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
             APY Rate
@@ -62,7 +62,7 @@ const Stakestats = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-stake-cards border-none pl-2 pr-20 ">
+      <Card className="bg-stake-cards border-none pl-2 pr-10 flex-1">
         <CardHeader>
           <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
             Stakers
