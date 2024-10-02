@@ -10,6 +10,10 @@ import {
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Jost } from "next/font/google";
+import StakeStepOne from "./StakeStepOne";
+import StakeStepTwo from "./StakeStepTwo";
+import StakeStepThree from "./StakeStepThree";
+import StakeStepFour from "./StakeStepFour";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -21,12 +25,61 @@ const StakeAssets = () => {
     <div>
       <Dialog>
         <DialogTrigger>Stake Assets</DialogTrigger>
-        <DialogContent>
+        {/* STAKE ONE  */}
+        {/* <DialogContent className="bg-black border-none">
           <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogTitle>
+              <p className={`${jost.className} text-xl font-bold text-white`}>
+                Choose Token to stake
+              </p>
+            </DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              <StakeStepOne />
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent> */}
+
+        {/* STAKE TWO  */}
+
+        {/* <DialogContent className="bg-black border-none">
+          <DialogHeader>
+            <DialogTitle>
+              <p className={`${jost.className} text-xl font-bold text-white`}>
+                Set the Period of stake
+              </p>
+            </DialogTitle>
+            <DialogDescription>
+              <StakeStepTwo />
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent> */}
+
+        {/* STAKE THREE  */}
+
+        {/* <DialogContent className="bg-black border-none">
+          <DialogHeader>
+            <DialogTitle>
+              <p className={`${jost.className} text-xl font-bold text-white`}>
+                Enter the Amount
+              </p>
+            </DialogTitle>
+            <DialogDescription>
+              <StakeStepThree />
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>  */}
+
+        {/* STAKE FOUR  */}
+
+        <DialogContent className="bg-black border-none">
+          <DialogHeader>
+            <DialogTitle>
+              <p className={`${jost.className} text-xl font-bold text-white`}>
+                Confirm Staking
+              </p>
+            </DialogTitle>
+            <DialogDescription>
+              <StakeStepFour />
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

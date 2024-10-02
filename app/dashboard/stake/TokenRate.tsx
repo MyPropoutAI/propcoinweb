@@ -17,7 +17,7 @@ const jost = Jost({
 
 const TokenRate = () => {
   return (
-    <div className="py-5">
+    <div className="py-5 px-5">
       <Card className="bg-stake-cards border-none px-5 py-5">
         <CardTitle>
           <p className={`${jost.className} text-xl text-gray-500 py-5`}>
