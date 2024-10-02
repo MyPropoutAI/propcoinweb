@@ -54,7 +54,7 @@ const TokenRate = () => {
           <div className="flex items-center gap-3">
             <div className="bg-stake-cards w-fit rounded-full flex items-center justify-center">
               <Image
-                src="/images/stakeprop.svg"
+                src="/images/stakeproc.svg"
                 alt="Stake PROP"
                 height={60}
                 width={60}
@@ -79,7 +79,7 @@ const TokenRate = () => {
           <div className="flex items-center gap-3">
             <div className="bg-stake-cards w-fit rounded-full flex items-center justify-center">
               <Image
-                src="/images/stakelsk.svg"
+                src="/images/stakelisk.svg"
                 alt="Stake LISK"
                 height={60}
                 width={60}

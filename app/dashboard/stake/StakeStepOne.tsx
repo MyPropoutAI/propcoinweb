@@ -1,73 +1,54 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
-import {
-  Card,
-  CardDescription,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Jost } from "next/font/google";
+import { Card } from "@/components/ui/card";
 
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
+interface StakeStepOneProps {
+  setStakeInfo: React.Dispatch<
+    React.SetStateAction<{
+      token: string | null;
+      duration: string | null;
+      amount: string;
+    }>
+  >;
+}
 
-const StakeStepOne = () => {
+const StakeStepOne: React.FC<StakeStepOneProps> = ({ setStakeInfo }) => {
+  const [selectedToken, setSelectedToken] = useState<string | null>(null);
+
+  const handleSelectToken = (token: string) => {
+    setSelectedToken(token);
+    setStakeInfo((prev) => ({ ...prev, token }));
+  };
+
   return (
     <div className="flex flex-col gap-3">
-      <Card className="bg-stake-cards border-none py-5 w-full pr-40">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/images/stakeusdt.svg"
-            alt="Stake USDT"
-            height={60}
-            width={60}
-            className="object-contain p-2"
-          />
-          <p className={`${jost.className} text-xl font-bold text-white`}>
-            USDT
-          </p>
-        </div>
-      </Card>
-
-      <Card className="bg-stake-cards border-none py-5 w-full pr-40">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/images/stakeprop.svg"
-            alt="Stake PROP"
-            height={60}
-            width={60}
-            className="object-contain p-2"
-          />
-          <p className={`${jost.className} text-xl font-bold text-white`}>
-            PROC
-          </p>
-        </div>
-      </Card>
-      <Card className="bg-stake-cards border-none py-5 w-full pr-40">
-        <div className="flex items-center gap-3">
-          <Image
-            src="/images/stakelsk.svg"
-            alt="Stake LISK"
-            height={60}
-            width={60}
-            className="object-contain p-2"
-          />
-          <p className={`${jost.className} text-xl font-bold text-white`}>
-            LISK
-          </p>
-        </div>
-      </Card>
-
-      <Button
-        className={`${jost.className} bg-indigo-600 flex w-full py-5 rounded-lg text-[1.1rem] text-white justify-center hover:bg-indigo-600`}
-      >
-        Continue
-      </Button>
+      {["USDT", "PROC", "LISK"].map((token) => (
+        <Card
+          key={token}
+          className={`bg-stake-cards border-none py-5 w-full pr-40 cursor-pointer ${
+            selectedToken === token ? "bg-indigo-600" : ""
+          }`}
+          onClick={() => handleSelectToken(token)}
+        >
+          <div className="flex items-center gap-3">
+            <Image
+              src={`/images/stake${token.toLowerCase()}.svg`}
+              alt={`Stake ${token}`}
+              height={60}
+              width={60}
+              className="object-contain p-2"
+            />
+            <p className="text-xl font-bold text-white">{token}</p>
+          </div>
+        </Card>
+      ))}
+      {selectedToken && (
+        <p className="mt-4 text-white">
+          You have selected: <strong>{selectedToken}</strong>
+        </p>
+      )}
     </div>
   );
 };
