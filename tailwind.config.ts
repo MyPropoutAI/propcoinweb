@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "radial-blue": "radial-gradient(circle, #3b82f6, #60a5fa)",
+        "radial-yellow": "radial-gradient(circle, #fbbf24, #fef08a)",
+      },
       colors: {
         "stake-cards": "rgba(26, 28, 25, 0.8)",
         background: "hsl(var(--background))",

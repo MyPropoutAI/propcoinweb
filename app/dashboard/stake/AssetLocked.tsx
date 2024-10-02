@@ -17,20 +17,28 @@ const jost = Jost({
 const AssetLocked = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 bg-stake-cards border-none">
-      <Card className="bg-black pl-2 pr-20 ">
-        <CardHeader>
-          <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
+      <Card className="bg-stake-cards border-none rounded-lg p-5 relative">
+        <div className="flex flex-col gap-5">
+          <p className={`${jost.className} text-2xl text-gray-500 -mb-5`}>
             Lock Period
           </p>
-        </CardHeader>
-        <CardContent>
-          <Image
-            src={"/images/lock.svg"}
-            alt="Asset Locked"
-            height={200}
-            width={200}
-          />
-        </CardContent>
+
+          <div className="bg-radial-blue p-[1rem] ">{/* Content here */}</div>
+
+          <Card className="bg-transparent border- rounded-lg mt-6 p-6 mx-6 -mb-[1.4rem] z-10">
+            <div className="flex flex-col p-10">
+              <Image
+                src={"/images/stakelocked.svg"}
+                alt="Asset Locked"
+                height={200}
+                width={200}
+              />
+              <p className={`${jost.className} text-xl text-gray-500 -mb-5`}>
+                You have no staked assets
+              </p>
+            </div>
+          </Card>
+        </div>
       </Card>
     </div>
   );

@@ -7,7 +7,7 @@ import TokenRate from "./TokenRate";
 const page = () => {
   return (
     <div>
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-1">
         <Stakestats />
         <div className="flex gap-4 items-center">
           <Chart />
