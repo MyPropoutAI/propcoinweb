@@ -15,7 +15,7 @@ import StakeStepOne from "./StakeStepOne";
 import StakeStepTwo from "./StakeStepTwo";
 import StakeStepThree from "./StakeStepThree";
 import StakeStepFour from "./StakeStepFour";
-import ProgressBar from "./progressBar";
+import ProgressBar from "./ProgressBar";
 import { HiArrowLeft } from "react-icons/hi";
 
 const jost = Jost({
