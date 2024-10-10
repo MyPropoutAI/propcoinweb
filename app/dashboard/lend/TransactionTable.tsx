@@ -12,7 +12,7 @@ import { Jost } from "next/font/google";
 
 const jost = Jost({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  weight: ["500"],
 });
 
 // Define headers for the table
@@ -85,57 +85,62 @@ const tableData = [
 
 const TransactionTable = () => {
   return (
-    <Table className={`${jost.className} w-full text-gray-300`}>
-      <TableHeader>
-        <TableRow>
-          {headers.map((header, index) => (
-            <TableHead key={index} className="px-4 py-4 text-gray-300 text-xl">
-              {header.label}
-            </TableHead>
-          ))}
-        </TableRow>
-      </TableHeader>
-
-      <TableBody>
-        {tableData.map((data, index) => (
-          <TableRow key={index} className="border-b hover:bg-black">
-            <TableCell className="font-medium px-4 py-4">
-              <p className="text-xl">{data.collection}</p>
-              <p className="text-[0.8rem] text-gray-400">
-                {data.floorPrice}{" "}
-                <span className="text-md text-gray-500">floor</span>
-              </p>
-            </TableCell>
-            <TableCell className="px-4 py-4">
-              <p className="text-xl">{data.loansAvailable}</p>
-              <p className="text-[0.8rem] text-gray-400">
-                {data.loansAvailable}{" "}
-                <span className="text-md text-gray-500">loans available</span>
-              </p>
-            </TableCell>
-            <TableCell className="px-4 py-4">
-              <p className="text-xl">{data.lastLoanToken}</p>
-              <p className="text-[0.8rem] text-gray-400">
-                {data.lastLoanToken}{" "}
-                <span className="text-md text-gray-500">last loan token</span>
-              </p>
-            </TableCell>
-            <TableCell className="px-4 py-4">
-              <p className="text-xl">{data.loanDuration}</p>
-            </TableCell>
-            <TableCell className="px-4 py-4">
-              <p className="text-xl">{data.returnRate}</p>
-              <p className="text-[0.8rem] text-gray-400">{data.apy}</p>
-            </TableCell>
-            <TableCell className="px-4 py-2">
-              <button className="text-xl bg-indigo-600 rounded-lg px-4 py-2">
-                <LendBtn />
-              </button>
-            </TableCell>
+    <div className={`${jost.className}`}>
+      <Table className={`${jost.className} w-full text-gray-300`}>
+        <TableHeader>
+          <TableRow>
+            {headers.map((header, index) => (
+              <TableHead
+                key={index}
+                className="px-4 py-4 text-gray-300 text-xl"
+              >
+                {header.label}
+              </TableHead>
+            ))}
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+        </TableHeader>
+
+        <TableBody>
+          {tableData.map((data, index) => (
+            <TableRow key={index} className="border-b hover:bg-black">
+              <TableCell className="font-medium px-4 py-4">
+                <p className="text-xl">{data.collection}</p>
+                <p className="text-[0.8rem] text-gray-400">
+                  {data.floorPrice}{" "}
+                  <span className="text-md text-gray-500">floor</span>
+                </p>
+              </TableCell>
+              <TableCell className="px-4 py-4">
+                <p className="text-xl">{data.loansAvailable}</p>
+                <p className="text-[0.8rem] text-gray-400">
+                  {data.loansAvailable}{" "}
+                  <span className="text-md text-gray-500">loans available</span>
+                </p>
+              </TableCell>
+              <TableCell className="px-4 py-4">
+                <p className="text-xl">{data.lastLoanToken}</p>
+                <p className="text-[0.8rem] text-gray-400">
+                  {data.lastLoanToken}{" "}
+                  <span className="text-md text-gray-500">last loan token</span>
+                </p>
+              </TableCell>
+              <TableCell className="px-4 py-4">
+                <p className="text-xl">{data.loanDuration}</p>
+              </TableCell>
+              <TableCell className="px-4 py-4">
+                <p className="text-xl">{data.returnRate}</p>
+                <p className="text-[0.8rem] text-gray-400">{data.apy}</p>
+              </TableCell>
+              <TableCell className="px-4 py-2">
+                <button className="text-xl bg-indigo-600 rounded-lg px-4 py-2">
+                  <LendBtn />
+                </button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
   );
 };
 

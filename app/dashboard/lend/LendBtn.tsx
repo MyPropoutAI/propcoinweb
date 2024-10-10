@@ -7,21 +7,19 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import UserProfile from "./UserProfile";
 
 const LendBtn = () => {
   return (
     <div>
       <Dialog>
         <DialogTrigger>Lend</DialogTrigger>
-        <DialogContent>
+        <DialogContent className="p-0 bg-black">
           <DialogHeader>
-            <DialogTitle>
-              <div></div>
+            <DialogTitle className="">
+              <UserProfile />
             </DialogTitle>
-            <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </DialogDescription>
+            <DialogDescription></DialogDescription>
           </DialogHeader>
         </DialogContent>
       </Dialog>
