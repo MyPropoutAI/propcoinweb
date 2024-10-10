@@ -132,9 +132,9 @@ const TransactionTable = () => {
                 <p className="text-[0.8rem] text-gray-400">{data.apy}</p>
               </TableCell>
               <TableCell className="px-4 py-2">
-                <button className="text-xl bg-indigo-600 rounded-lg px-4 py-2">
+                <div className="text-xl bg-indigo-600 rounded-lg pl-4 py-2">
                   <LendBtn />
-                </button>
+                </div>
               </TableCell>
             </TableRow>
           ))}

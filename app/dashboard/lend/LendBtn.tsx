@@ -14,7 +14,7 @@ const LendBtn = () => {
     <div>
       <Dialog>
         <DialogTrigger>Lend</DialogTrigger>
-        <DialogContent className="p-0 bg-black">
+        <DialogContent className="p-0 bg-black border-black !rounded-xl ">
           <DialogHeader>
             <DialogTitle className="">
               <UserProfile />

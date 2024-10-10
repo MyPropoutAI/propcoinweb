@@ -1,7 +1,12 @@
 import React from "react";
+import OfferTransactionTable from "./OfferTransactionTable";
 
 const Offers = () => {
-  return <div>Offers</div>;
+  return (
+    <div>
+      <OfferTransactionTable />
+    </div>
+  );
 };
 
 export default Offers;

@@ -44,6 +44,15 @@ body {
     @apply shadow-2xl shadow-white;
   } */
 }
+.blur-background {
+  @apply filter blur-md transition duration-300 ease-in-out;
+}
+
+.blurred-background {
+  position: relative;
+  backdrop-filter: blur(10px); /* Adjust the blur amount */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+}
 
 @layer base {
   :root {
