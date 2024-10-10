@@ -2,13 +2,12 @@ import React from "react";
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
+import LendBtn from "./LendBtn";
 import { Jost } from "next/font/google";
 
 const jost = Jost({
@@ -16,15 +15,17 @@ const jost = Jost({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+// Define headers for the table
 const headers = [
   { label: "Collections" },
   { label: "Available Pool" },
-  { label: "Highest loan offer" },
+  { label: "Highest Loan Offer" },
   { label: "Loan Duration" },
-  { label: "%Return/loan" },
-  { label: " " },
+  { label: "% Return/Loan" },
+  { label: "" },
 ];
 
+// Sample data for the table
 const tableData = [
   {
     collection: "DeGods",
@@ -85,65 +86,51 @@ const tableData = [
 const TransactionTable = () => {
   return (
     <Table className={`${jost.className} w-full text-gray-300`}>
-      {/* <TableCaption>A list of your recent lend and borrowing transactions.</TableCaption> */}
       <TableHeader>
         <TableRow>
           {headers.map((header, index) => (
-            <TableHead key={index} className="px-4 py-2">
+            <TableHead key={index} className="px-4 py-4 text-gray-300 text-xl">
               {header.label}
             </TableHead>
           ))}
         </TableRow>
       </TableHeader>
+
       <TableBody>
         {tableData.map((data, index) => (
           <TableRow key={index} className="border-b hover:bg-black">
-            <TableCell className="font-medium px-4 py-2">
-              <p className={`${jost.className} text-xl`}>{data.collection}</p>
-              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
+            <TableCell className="font-medium px-4 py-4">
+              <p className="text-xl">{data.collection}</p>
+              <p className="text-[0.8rem] text-gray-400">
                 {data.floorPrice}{" "}
-                <span className={`${jost.className} text-md text-gray-500`}>
-                  floor
-                </span>
+                <span className="text-md text-gray-500">floor</span>
               </p>
             </TableCell>
-            <TableCell className="px-4 py-2">
-              <p className={`${jost.className} text-xl`}>
-                {data.loansAvailable}
-              </p>
-              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
+            <TableCell className="px-4 py-4">
+              <p className="text-xl">{data.loansAvailable}</p>
+              <p className="text-[0.8rem] text-gray-400">
                 {data.loansAvailable}{" "}
-                <span className={`${jost.className} text-md text-gray-500`}>
-                  loans available
-                </span>
+                <span className="text-md text-gray-500">loans available</span>
               </p>
             </TableCell>
-            <TableCell className="px-4 py-2">
-              <p className={`${jost.className} text-xl`}>
-                {data.lastLoanToken}
-              </p>
-              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
+            <TableCell className="px-4 py-4">
+              <p className="text-xl">{data.lastLoanToken}</p>
+              <p className="text-[0.8rem] text-gray-400">
                 {data.lastLoanToken}{" "}
-                <span className={`${jost.className} text-md text-gray-500`}>
-                  last loan token
-                </span>
+                <span className="text-md text-gray-500">last loan token</span>
               </p>
             </TableCell>
-            <TableCell className="px-4 py-2">
-              <p className={`${jost.className} text-xl`}>{data.loanDuration}</p>
+            <TableCell className="px-4 py-4">
+              <p className="text-xl">{data.loanDuration}</p>
+            </TableCell>
+            <TableCell className="px-4 py-4">
+              <p className="text-xl">{data.returnRate}</p>
+              <p className="text-[0.8rem] text-gray-400">{data.apy}</p>
             </TableCell>
             <TableCell className="px-4 py-2">
-              <p className={`${jost.className} text-xl`}>{data.returnRate}</p>
-              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
-                {data.apy}
-              </p>
-            </TableCell>
-            <TableCell className="px-4 py-2">
-              <Button
-                className={`${jost.className} text-xl bg-indigo-600 rounded-lg`}
-              >
-                Lend
-              </Button>
+              <button className="text-xl bg-indigo-600 rounded-lg px-4 py-2">
+                <LendBtn />
+              </button>
             </TableCell>
           </TableRow>
         ))}
