@@ -84,8 +84,8 @@ const tableData = [
 
 const TransactionTable = () => {
   return (
-    <Table className="w-full">
-      <TableCaption>A list of your recent invoices.</TableCaption>
+    <Table className={`${jost.className} w-full text-gray-300`}>
+      {/* <TableCaption>A list of your recent lend and borrowing transactions.</TableCaption> */}
       <TableHeader>
         <TableRow>
           {headers.map((header, index) => (
@@ -97,10 +97,10 @@ const TransactionTable = () => {
       </TableHeader>
       <TableBody>
         {tableData.map((data, index) => (
-          <TableRow key={index} className="border-b">
+          <TableRow key={index} className="border-b hover:bg-black">
             <TableCell className="font-medium px-4 py-2">
               <p className={`${jost.className} text-xl`}>{data.collection}</p>
-              <p className={`${jost.className} text-[1.1rem]`}>
+              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
                 {data.floorPrice}{" "}
                 <span className={`${jost.className} text-md text-gray-500`}>
                   floor
@@ -111,7 +111,7 @@ const TransactionTable = () => {
               <p className={`${jost.className} text-xl`}>
                 {data.loansAvailable}
               </p>
-              <p className={`${jost.className} text-[1.1rem]`}>
+              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
                 {data.loansAvailable}{" "}
                 <span className={`${jost.className} text-md text-gray-500`}>
                   loans available
@@ -122,7 +122,7 @@ const TransactionTable = () => {
               <p className={`${jost.className} text-xl`}>
                 {data.lastLoanToken}
               </p>
-              <p className={`${jost.className} text-[1.1rem]`}>
+              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
                 {data.lastLoanToken}{" "}
                 <span className={`${jost.className} text-md text-gray-500`}>
                   last loan token
@@ -134,7 +134,7 @@ const TransactionTable = () => {
             </TableCell>
             <TableCell className="px-4 py-2">
               <p className={`${jost.className} text-xl`}>{data.returnRate}</p>
-              <p className={`${jost.className} text-[1.1rem] text-gray-500`}>
+              <p className={`${jost.className} text-[0.8rem] text-gray-400`}>
                 {data.apy}
               </p>
             </TableCell>

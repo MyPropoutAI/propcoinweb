@@ -6,9 +6,9 @@ import Offers from "./Offers";
 
 const LendTransactions = () => {
   return (
-    <Card className="flex flex-row justify-between p-10 bg-stake-cards text-white border-none rounded-lg">
-      <Tabs defaultValue="">
-        <TabsList>
+    <Card className="bg-stake-cards border-none px-7 py-5">
+      <Tabs defaultValue="make-offers">
+        <TabsList className="flex flex-row justify-center w-full border-none bg-transparent text-gray-300 text-2xl">
           <TabsTrigger value="make-offers">Make Offers</TabsTrigger>
           <TabsTrigger value="offers-made">Offers Made</TabsTrigger>
         </TabsList>
