@@ -13,8 +13,8 @@ const jost = Jost({
 
 const SbtCards = () => {
   return (
-    <div className={`${jost.className} text-3xl font-bold flex flex-col gap-3`}>
-      <section className="flex gap-3 ">
+    <div className={`${jost.className} text-3xl font-bold flex flex-col gap-5`}>
+      <section className="flex gap-5 ">
         <Card className="flex-1 px-5 py-10 bg-gradient-to-r from-[#CCD024] to-[#1F8406] border-none text-white flex flex-col justify-between">
           <CardHeader>
             Medical <br />
@@ -42,7 +42,7 @@ const SbtCards = () => {
         </Card>
       </section>
 
-      <section className="flex gap-3 ">
+      <section className="flex gap-5 ">
         <Card className="flex-1 px-5 py-10 bg-gradient-to-r from-[#24D073] to-[#062984] border-none text-white flex flex-col justify-between">
           <CardHeader>
             RWA <br />
