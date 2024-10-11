@@ -34,6 +34,13 @@ body {
     box-shadow: 0px 0px 250px 50px #990000, 0px 0px 250px 100px #cc0000;
   }
 
+  .sbt_hero {
+    @apply aspect-square opacity-40 absolute left-1/2 -translate-x-1/2 bg-blue-700;
+    margin-top: 20px; /* Adjust this value as needed */
+    box-shadow: 0px 0px 150px 100px rgba(59, 130, 246, 1),
+      0px 0px 150px 60px rgba(96, 165, 250, 0.7);
+  }
+
   .glow_blue {
     @apply aspect-square opacity-40 absolute left-1/2  -translate-y-1/2  -translate-x-1/2;
     box-shadow: 0px 0px 105px 75px #3b82f6, 0px 0px 105px 45px #60a5fa;
@@ -108,6 +115,15 @@ body {
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
+}
+
+.gradient-card {
+  background: linear-gradient(
+    to right,
+    #d3ff5d,
+    #3a5b3a
+  ); /* Lemon green to dark green */
+  /* Add any other styles you want, e.g., padding, border-radius, etc. */
 }
 
 @layer base {
