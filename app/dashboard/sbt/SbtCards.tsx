@@ -16,6 +16,7 @@ const cardData = [
   { title: "RWA Collections", gradient: "from-[#24D073] to-[#062984]" },
   { title: "Bio Collections", gradient: "from-[#DF59E1] to-[#D00F27]" },
   { title: "Game Collections", gradient: "from-[#385819] to-[#320051]" },
+  // option to add new ones or modify these old ones
 ];
 
 const SbtCards = () => {
