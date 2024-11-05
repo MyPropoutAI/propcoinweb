@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { Jost } from "next/font/google";
+import SwapFunc from "./SwapFunc";
 
 const jost = Jost({
   subsets: ["latin"],
@@ -24,8 +25,7 @@ const SwapDialog = () => {
           <DialogHeader>
             <DialogTitle>Swap Asset</DialogTitle>
             <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              <SwapFunc />
             </DialogDescription>
           </DialogHeader>
         </DialogContent>
