@@ -77,14 +77,19 @@ const page: React.FC = () => {
 
         <div className="flex gap-2 mt-10">
           <button className="bg-indigo-600 rounded-lg px-7 py-2 flex justify-center items-center text-[1.1rem] gap-1">
-            <Image
-              src="/icons/withdraw.svg"
-              alt="Deposit icon"
-              width={20}
-              height={20}
-              className="transform rotate-180"
-            />
-            Deposit
+            <Link
+              href="/dashboard/wallet/deposit"
+              className="bg-indigo-600 rounded-lg px-7 py-2 flex justify-center items-center text-[1.1rem] gap-1"
+            >
+              <Image
+                src="/icons/withdraw.svg"
+                alt="Deposit icon"
+                width={20}
+                height={20}
+                className="transform rotate-180"
+              />
+              Deposit
+            </Link>
           </button>
           <Link
             href="/dashboard/withdraw"

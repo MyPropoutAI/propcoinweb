@@ -24,12 +24,12 @@ const WalletAsset = () => {
   };
   return (
     <div className={`${jost.className} text-gray-200 flex flex-col gap-5`}>
-      <Card className="bg-stake-cards px-5 py-5 text-gray-200 border-none">
-        <nav className="flex justify-between">
+      <Card className="bg-stake-cards px-10 py-10 text-gray-200 border-none">
+        <nav className="flex gap-10">
           <a
             href="#"
             className={`text-xl ${
-              selected === "crypto" ? "text-blue-500" : ""
+              selected === "crypto" ? "border-b-2 border-blue-500" : ""
             }`}
             onClick={() => handleClick("crypto")}
           >
@@ -37,21 +37,27 @@ const WalletAsset = () => {
           </a>
           <a
             href="#"
-            className={`text-xl ${selected === "sbt" ? "text-blue-500" : ""}`}
+            className={`text-xl ${
+              selected === "sbt" ? "border-b-2 border-blue-500" : ""
+            }`}
             onClick={() => handleClick("sbt")}
           >
             SBTs
           </a>
           <a
             href="#"
-            className={`text-xl ${selected === "fiat" ? "text-blue-500" : ""}`}
+            className={`text-xl ${
+              selected === "fiat" ? "border-b-2 border-blue-500" : ""
+            }`}
             onClick={() => handleClick("fiat")}
           >
             Fiat
           </a>
           <a
             href="#"
-            className={`text-xl ${selected === "nft" ? "text-blue-500" : ""}`}
+            className={`text-xl ${
+              selected === "nft" ? "border-b-2 border-blue-500" : ""
+            }`}
             onClick={() => handleClick("nft")}
           >
             NFTs
@@ -59,7 +65,7 @@ const WalletAsset = () => {
         </nav>
 
         {/* Conditional content rendering based on the selected link */}
-        <div className="mt-4">
+        <div className="mt-5">
           {selected === "crypto" && <Crypto />}
           {selected === "sbt" && <SBT />}
           {selected === "fiat" && <Fiat />}
