@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MessageCircle, Send, Twitter } from "lucide-react";
+import { FaInstagram } from "react-icons/fa";
 
 const navItem = [
   { title: "Dashboard", link: "/dashboard", icon: "/icons/dashboard.svg" },
@@ -70,9 +71,33 @@ const SideBar = () => {
         })}
       </nav>
       <div className=" flex mt-[10rem] justify-center items-center space-x-3">
-        <Send className="w-6 h-6" />
-        <Twitter className="w-6 h-6" />
-        <MessageCircle className="w-6 h-6" />
+        {/* <MessageCircle className="w-6 h-6" /> */}
+        <Link
+          href="https://www.instagram.com/mypropoutai/"
+          title="social"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram className="w-6 h-6 cursor-pointer" />
+        </Link>
+
+        <Link
+          href="https://x.com/MyPropOut "
+          title="social"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Twitter className="w-6 h-6 cursor-pointer" />
+        </Link>
+
+        <Link
+          href="https://t.me/+0THrDm5u1CUwZTU0"
+          title="social"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Send className="w-6 h-6 cursor-pointer" />
+        </Link>
       </div>
     </aside>
   );
