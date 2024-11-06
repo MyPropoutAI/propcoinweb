@@ -75,7 +75,7 @@ const page: React.FC = () => {
           </div>
         </section>
 
-        <div className="flex gap-2 my-5">
+        <div className="flex gap-2 mt-10">
           <button className="bg-indigo-600 rounded-lg px-7 py-2 flex justify-center items-center text-[1.1rem] gap-1">
             <Image
               src="/icons/withdraw.svg"
