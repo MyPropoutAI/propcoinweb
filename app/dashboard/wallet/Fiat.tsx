@@ -14,7 +14,7 @@ const Fiat = () => {
     >
       <div className="flex justify-center py-5 relative">
         <Image
-          src={"/images/ssbbtt.svg"}
+          src={"/images/money.svg"}
           alt="stake btc"
           width={150}
           height={150}
