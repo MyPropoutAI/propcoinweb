@@ -18,7 +18,7 @@ const Stakecard = () => {
       <div className="flex gap-3">
         {/* staked options */}
         <Select value={stakeOption} onValueChange={setstakeOption}>
-          <SelectTrigger className="w-[180px] border-gray-700 text-gray-600">
+          <SelectTrigger className=" border-gray-700 text-gray-600">
             <SelectValue className="text-white" placeholder="staked" />
           </SelectTrigger>
           <SelectContent>

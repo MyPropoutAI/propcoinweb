@@ -15,6 +15,14 @@ import {
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
+import { Jost } from "next/font/google";
+import Image from "next/image";
+
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
 const data = [
   { date: "Sep 5", value: 1600 },
   { date: "Sep 6", value: 1500 },
@@ -53,7 +61,7 @@ export default function HomePage() {
   const [cryptoPair, setCryptoPair] = useState("PROC/USD");
 
   return (
-    <div className="flex bg-black text-white">
+    <div className={`${jost.className} flex bg-black text-white`}>
       {/* Main content */}
       <div className="flex-1 p-8 overflow-y-auto">
         <motion.div
@@ -68,9 +76,9 @@ export default function HomePage() {
                   <p className="text-sm text-gray-200">Wallet balance</p>
                   <h3 className="text-3xl font-bold text-white">$1,500.00</h3>
                 </div>
-                <div className="flex">
+                <div className={`${jost.className} flex gap-3`}>
                   <Select value={cryptoPair} onValueChange={setCryptoPair}>
-                    <SelectTrigger className="w-[180px] bg-indigo-600">
+                    <SelectTrigger className="w-[180px] text-gray-600 font-bold bg-transparent border-gray-600">
                       <SelectValue placeholder="Select pair" />
                     </SelectTrigger>
                     <SelectContent>
@@ -80,7 +88,7 @@ export default function HomePage() {
                     </SelectContent>
                   </Select>
                   <Select value={timeFrame} onValueChange={setTimeFrame}>
-                    <SelectTrigger className="w-[180px] bg-indigo-600">
+                    <SelectTrigger className="w-[180px] text-gray-600 font-bold bg-transparent border-gray-600">
                       <SelectValue placeholder="Select timeframe" />
                     </SelectTrigger>
                     <SelectContent>

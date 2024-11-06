@@ -31,7 +31,9 @@ const Chart = () => {
           >
             <CardContent className="p-6">
               <div className="flex justify-between gap-10 items-center mb-4">
-                <p className={`${jost.className} text-2xl text-gray-500`}>
+                <p
+                  className={`${jost.className} text-2xl text-gray-500 text-nowrap`}
+                >
                   Staking chart
                 </p>
                 <Stakecard />
